@@ -1,0 +1,219 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+:focus{
+    outline:none;
+}
+:root{
+    --main-bg-color: #fff;
+    --secondary-bg-color: #f0efef;
+    --main-font-color: #757775;
+    --heading-font-color: black;
+    --links-color: blue;
+    --border-color: #ded0d0;
+    --form-color: #dedcdc;
+}
+body{
+    font-family: Helvetica, sans-serif;
+    background-color:var(--secondary-bg-color);
+}
+body::-webkit-scrollbar {
+    display: none;
+  }
+a{
+    text-decoration: none;
+    color: var(--links-color);
+}
+.first-row{
+    display:flex;
+    justify-content: space-between;
+    color: var(--links-color);
+    position: sticky;
+    top:0;
+    left:0;
+    padding: 20px 20px 0 20px;
+}
+.button-container{
+    background-color: var(--form-color);
+    padding:1.5px 2px;
+    border-radius: 3px;
+}
+button{
+    width:4rem;
+    border: none;
+    background-color: var(--main-bg-color);
+    padding:3px 5px;
+    text-align: center;
+    border-radius: 3px ;
+    box-shadow: 1px 1px rgb(209, 209, 209);
+    cursor: pointer;
+}
+.missed{
+    background-color: var(--form-color);
+    box-shadow: none;
+}
+h1{
+    font-size: 2rem;
+    margin: 10px auto;
+}
+form{
+    width:100%;
+    background-color: var(--form-color);
+    border-radius: 10px;
+    padding:7px 10px;
+    margin-bottom: 10px;
+}
+#search{
+    border:none;
+    background-color: var(--form-color); 
+}
+.fa-magnifying-glass{
+    color:#a19f9f;
+}
+::placeholder{
+    font-size: 1rem;
+}
+.section1{
+    padding:10px 15px 5px 15px;
+}
+.call-list{
+    border-top: 1px solid var(--border-color);
+}
+.status{
+    padding:0px 15px;
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    align-items: center;
+}
+.status img{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor:pointer;
+}
+.status-container{
+    width: 100%;
+    cursor:pointer;
+    align-self: center;
+    margin-top: 5px;
+}
+.status-container p{
+    display: flex;
+    margin-left: 15px;
+    justify-content: space-between;
+    font-size:1em;
+}
+.call-list :nth-child(3) p{
+    color:red;
+}
+.outgoing{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-video{
+    margin: 0 7px 0 0;
+    font-size:12px;   
+}
+.status-message{
+    margin-left: 20px;
+    color:#757775;
+    max-width: 25ch;
+    font-size:14px;
+}
+.missed-data{
+    display: flex;
+    flex-direction: row;
+    font-size:15px;
+    padding: 0 10px;
+    margin-top: 5px;
+    color: var(--main-font-color);
+}
+.missed-data span{
+    margin-right: 10px;
+}
+
+.break-line{
+    display:block;
+    height: 1px;
+    width:calc(100% - 60px);
+    margin-left:60px;
+    margin-top: 2px;
+    background-color: var(--border-color);
+}
+.encrypted-status{
+    margin-top: 30px;
+}
+.encrypted-status p{
+    text-align: center;
+    color: var(--main-font-color);
+    font-size: 14px;
+}
+.fa-lock{
+    margin: 0 10px;
+}
+
+.nav-menu{
+    display:flex;
+    justify-content: space-around;
+    background-color: #f0efef;
+    padding: 10px 0 3px 0;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 2;
+}
+nav li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fas{
+    color:#757775;
+    transform: scale(1.4);
+    margin-bottom: 7px;
+}
+.nav-menu a{
+    color:#757775;
+}
+.fa-phone{
+    color:blue;
+}
+.nav-item{
+    font-size: 0.7rem;
+}
+.item-active a{
+    color:blue;
+}
+/** THIS CODE IS HERE BECEAUSE OF THE SPECIFICITY OF CSS *****/
+
+
+.new-call{
+    position:relative;
+    cursor: pointer;
+}
+.fa-info-circle{
+    color: var(--links-color);
+    cursor: pointer;
+}
+.incoming{
+    margin: 0 7px 0 0;
+    font-size:10px;  
+    color: var(--main-font-color);
+}
+.new-call i{
+    font-size: 18px;
+    color: var(--links-color);
+    margin-right: 5px;
+    transform: rotate(90deg);
+}
+.new-call span{
+    font-size:16px;
+    position: absolute;
+    top:-20%;
+    left:50%;
+}
